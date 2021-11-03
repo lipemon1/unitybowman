@@ -37,7 +37,7 @@ namespace BowMan.Behaviors
         
         void Update()
         {
-            CalculateTrajectory(_trajectoryPoints, _spaceBetweenPoints, _shootBehavior.GetPositionToLaunchProjectile(), _directionInputBehavior.GetDirection(), _bowBehavior.GetProjectileForce());
+            CalculateTrajectory(_trajectoryPoints, _spaceBetweenPoints, _shootBehavior.GetPositionToLaunchProjectile(), _directionInputBehavior.GetDirection(), LaunchForceBehavior.CurForce);
         }
 
         static void CalculateTrajectory(IReadOnlyList<GameObject> trajectoryPoints, float spaceBetweenPoints, Vector3 emitPoint, Vector3 direction, float curForce)

@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace BowMan.Behaviors
 {
-    [RequireComponent(typeof(BowBehavior))]
     public class ShootBehavior : MonoBehaviour
     {
         [SerializeField] GameObject _projectilePrefab;
         [SerializeField] Transform _pointToLaunchProjectile;
-
+        [SerializeField] string _shootInputName;
+        
         BowBehavior _bowBehavior;
 
         void Awake()
@@ -20,7 +20,7 @@ namespace BowMan.Behaviors
         
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown(_shootInputName))
                 Shoot();
         }
         

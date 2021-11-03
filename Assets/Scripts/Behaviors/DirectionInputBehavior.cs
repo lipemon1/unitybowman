@@ -7,8 +7,6 @@ namespace BowMan.Behaviors
     public class DirectionInputBehavior : MonoBehaviour
     {
         [SerializeField] Transform _bowPivotTransform;
-        [SerializeField] bool _isMovingJoystick;
-        [SerializeField] bool _isMovingMouse;
 
         //cached values
         Vector2 _bowPosition;
@@ -16,6 +14,9 @@ namespace BowMan.Behaviors
         Vector2 _inputPosition;
         Camera _camera;
 
+        bool _isMovingJoystick;
+        bool _isMovingMouse;
+        
         float _horizontalInput;
         float _verticalInput;
 
