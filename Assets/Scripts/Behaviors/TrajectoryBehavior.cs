@@ -6,6 +6,7 @@ namespace BowMan.Behaviors
 {
     [RequireComponent(typeof(BowBehavior))]
     [RequireComponent(typeof(ShootBehavior))]
+    [RequireComponent(typeof(DirectionInputBehavior))]
     public class TrajectoryBehavior : MonoBehaviour
     {
         [SerializeField] int _numberOfPointsToShow;
@@ -15,11 +16,13 @@ namespace BowMan.Behaviors
 
         BowBehavior _bowBehavior;
         ShootBehavior _shootBehavior;
+        DirectionInputBehavior _directionInputBehavior;
 
         void Awake()
         {
             _bowBehavior = GetComponent<BowBehavior>();
             _shootBehavior = GetComponent<ShootBehavior>();
+            _directionInputBehavior = GetComponent<DirectionInputBehavior>();
         }
 
         void Start()
@@ -34,7 +37,7 @@ namespace BowMan.Behaviors
         
         void Update()
         {
-            CalculateTrajectory(_trajectoryPoints, _spaceBetweenPoints, _shootBehavior.GetPositionToLaunchProjectile(), _bowBehavior.GetBowDirection(), _bowBehavior.GetProjectileForce());
+            CalculateTrajectory(_trajectoryPoints, _spaceBetweenPoints, _shootBehavior.GetPositionToLaunchProjectile(), _directionInputBehavior.GetDirection(), _bowBehavior.GetProjectileForce());
         }
 
         static void CalculateTrajectory(IReadOnlyList<GameObject> trajectoryPoints, float spaceBetweenPoints, Vector3 emitPoint, Vector3 direction, float curForce)

@@ -249,6 +249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571685462}
   - component: {fileID: 571685461}
+  - component: {fileID: 571685465}
   - component: {fileID: 571685463}
   - component: {fileID: 571685464}
   m_Layer: 0
@@ -315,6 +316,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 4509873623565637988, guid: 3993c7f0d177625488d2dd3e2a6eb765, type: 3}
   _pointToLaunchProjectile: {fileID: 920228603}
+--- !u!114 &571685465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571685460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 457fe881e645a974c926a9f966f101d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Direction: {x: 0, y: 0}
+  BowPivotTransform: {fileID: 845866145}
 --- !u!1 &662710811
 GameObject:
   m_ObjectHideFlags: 0
