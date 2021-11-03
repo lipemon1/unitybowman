@@ -328,8 +328,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457fe881e645a974c926a9f966f101d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: {x: 0, y: 0}
-  BowPivotTransform: {fileID: 845866145}
+  _bowPivotTransform: {fileID: 845866145}
+  _isMovingJoystick: 0
+  _isMovingMouse: 0
+  _bowPosition: {x: 0, y: 0}
+  _mousePosition: {x: 0, y: 0}
+  _inputPosition: {x: 0, y: 0}
 --- !u!1 &662710811
 GameObject:
   m_ObjectHideFlags: 0
